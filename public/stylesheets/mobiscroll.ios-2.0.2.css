@@ -1,0 +1,168 @@
+/* iOS Skin */
+
+.ios .dw {
+    min-width: 134px;
+    padding: 40px 10px 10px 10px;
+    border: 1px solid #2d3034;
+
+    border-radius: 0;
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+	color: 					#333333 /*{c-body-color}*/;
+	text-shadow: 0 /*{c-body-shadow-x}*/ 1px /*{c-body-shadow-y}*/ 0 /*{c-body-shadow-radius}*/ #fff /*{c-body-shadow-color}*/;
+	background: 			#f9f9f9 /*{c-body-background-color}*/;
+	background-image: -webkit-gradient(linear, left top, left bottom, from( #ddd /*{c-body-background-start}*/), to( #999 /*{c-body-background-end}*/)); /* Saf4+, Chrome */
+	background-image: -webkit-linear-gradient( #ddd /*{c-body-background-start}*/, #999 /*{c-body-background-end}*/); /* Chrome 10+, Saf5.1+ */
+	background-image:    -moz-linear-gradient( #ddd /*{c-body-background-start}*/, #999 /*{c-body-background-end}*/); /* FF3.6 */
+	background-image:     -ms-linear-gradient( #ddd /*{c-body-background-start}*/, #999 /*{c-body-background-end}*/); /* IE10 */
+	background-image:      -o-linear-gradient( #ddd /*{c-body-background-start}*/, #999 /*{c-body-background-end}*/); /* Opera 11.10+ */
+	background-image:         linear-gradient( #ddd /*{c-body-background-start}*/, #999 /*{c-body-background-end}*/);
+
+}
+.ios .dwi {
+    padding: 10px;
+}
+.ios .dwv {
+    display: none;
+}
+.ios .dwwc {
+    background: transparent;
+}
+.ios .dwwl {
+    margin: 4px 0;
+    border-left: 1px solid #000;
+    border-right: 1px solid #000;
+    background: #cbcce0;
+    background: -webkit-gradient(linear,left bottom,left top,color-stop(0, #2c2c38),color-stop(0.35, #cbcce0),color-stop(0.65, #cbcce0),color-stop(1, #2c2c38));
+    background: -moz-linear-gradient(#2c2c38 0%,#cbcce0 35%, #cbcce0 65%,#2c2c38 100%);
+    background: -ms-linear-gradient(#2c2c38 0%,#cbcce0 35%, #cbcce0 65%,#2c2c38 100%);
+    background: -o-linear-gradient(#2c2c38 0%,#cbcce0 35%, #cbcce0 65%,#2c2c38 100%);
+}
+.ios .dww {
+    margin: 0 3px;
+    background: #fff;
+    background: -webkit-gradient(linear,left bottom,left top,color-stop(0, #333),color-stop(0.10, #999),color-stop(0.30, #fff),color-stop(0.70, #fff),color-stop(0.90, #999),color-stop(1, #333));
+    background: -moz-linear-gradient(#333 0%,#999 10%,#fff 30%,#fff 70%,#999 90%,#333 100%);
+    background: -ms-linear-gradient(#333 0%,#999 10%,#fff 30%,#fff 70%,#999 90%,#333 100%);
+    background: -o-linear-gradient(#333 0%,#999 10%,#fff 30%,#fff 70%,#999 90%,#333 100%);
+    border-radius: 0;
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+}
+.ios .dwpm .dww {
+    background: -webkit-gradient(linear,left bottom,left top,color-stop(0, #333),color-stop(0.48, #fff),color-stop(0.52, #fff),color-stop(1, #333));
+    background: -moz-linear-gradient(#000 0%,#fff 48%,#fff 52%,#000 100%);
+    background: -ms-linear-gradient(#000 0%,#fff 48%,#fff 52%,#000 100%);
+    background: -o-linear-gradient(#000 0%,#fff 48%,#fff 52%,#000 100%);
+}
+.ios .dwpm .dwwl {
+    margin: 4px 2px;
+}
+.ios .dwpm .dww {
+    margin: 0;
+    border: 0;
+}
+.ios .dww li {
+    color: #000;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: right;
+    text-shadow: none;
+}
+.ios .dwwo {
+    display: none;
+}
+.ios .dwwol {
+    height: 28px;
+    padding: 1px;
+    margin-top: -16px;
+    border-color: #7b8699;
+    background: #6f75b0;
+    background: -webkit-gradient(linear,left bottom,left top,color-stop(0.5, rgba(111, 117, 176, 0.5)),color-stop(0.5, rgba(151, 157, 197, 0.5)));
+    background: -moz-linear-gradient(rgba(151, 157, 197, 0.5) 50%,rgba(111, 117, 176, 0.5) 50%);
+    background: -ms-linear-gradient(rgba(151, 157, 197, 0.5) 50%,rgba(111, 117, 176, 0.5) 50%);
+    background: -o-linear-gradient(rgba(151, 157, 197, 0.5) 50%,rgba(111, 117, 176, 0.5) 50%);
+    z-index: 10;
+    left: -1px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+    -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+    filter: alpha(opacity=50);
+}
+.ios .dwbc {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 5px 0;
+    background: 			#111111 /*{a-bar-background-color}*/;
+    color: 					#ffffff /*{a-bar-color}*/;
+    font-weight: bold;
+    text-shadow: 0 /*{a-bar-shadow-x}*/ -1px /*{a-bar-shadow-y}*/ 1px /*{a-bar-shadow-radius}*/ #000000 /*{a-bar-shadow-color}*/;
+    background-image: -webkit-gradient(linear, left top, left bottom, from( #3c3c3c /*{a-bar-background-start}*/), to( #111 /*{a-bar-background-end}*/)); /* Saf4+, Chrome */
+    background-image: -webkit-linear-gradient( #3c3c3c /*{a-bar-background-start}*/, #111 /*{a-bar-background-end}*/); /* Chrome 10+, Saf5.1+ */
+    background-image:    -moz-linear-gradient( #3c3c3c /*{a-bar-background-start}*/, #111 /*{a-bar-background-end}*/); /* FF3.6 */
+    background-image:     -ms-linear-gradient( #3c3c3c /*{a-bar-background-start}*/, #111 /*{a-bar-background-end}*/); /* IE10 */
+    background-image:      -o-linear-gradient( #3c3c3c /*{a-bar-background-start}*/, #111 /*{a-bar-background-end}*/); /* Opera 11.10+ */
+    background-image:         linear-gradient( #3c3c3c /*{a-bar-background-start}*/, #111 /*{a-bar-background-end}*/);
+
+    border-bottom: 1px solid #2d3034;
+}
+.ios .dwb {
+    margin: 0 5px;
+    display: inline-block;
+    font-size: 12px;
+    height: 26px;
+    line-height: 26px;
+    border: 1px solid 		#111 /*{a-bup-border}*/;
+    background: 			#333 /*{a-bup-background-color}*/;
+    font-weight: bold;
+    color: 					#fff /*{a-bup-color}*/;
+    text-shadow: 0 /*{a-bup-shadow-x}*/ 1px /*{a-bup-shadow-y}*/ 1px /*{a-bup-shadow-radius}*/ #111 /*{a-bup-shadow-color}*/;
+    background-image: -webkit-gradient(linear, left top, left bottom, from( #444444 /*{a-bup-background-start}*/), to( #2d2d2d /*{a-bup-background-end}*/)); /* Saf4+, Chrome */
+    background-image: -webkit-linear-gradient( #444444 /*{a-bup-background-start}*/, #2d2d2d /*{a-bup-background-end}*/); /* Chrome 10+, Saf5.1+ */
+    background-image:    -moz-linear-gradient( #444444 /*{a-bup-background-start}*/, #2d2d2d /*{a-bup-background-end}*/); /* FF3.6 */
+    background-image:     -ms-linear-gradient( #444444 /*{a-bup-background-start}*/, #2d2d2d /*{a-bup-background-end}*/); /* IE10 */
+    background-image:      -o-linear-gradient( #444444 /*{a-bup-background-start}*/, #2d2d2d /*{a-bup-background-end}*/); /* Opera 11.10+ */
+    background-image:         linear-gradient( #444444 /*{a-bup-background-start}*/, #2d2d2d /*{a-bup-background-end}*/);
+ }
+.ios .dwb-a {
+    border: 1px solid #394f76;
+    background: #2461e6;
+    background: -webkit-gradient(linear,left bottom,left top,color-stop(0, #4c6b9f),color-stop(0.5, #49689d),color-stop(0.5, #5a76a6),color-stop(1, #8fa4c4));
+    background: -moz-linear-gradient(#8fa4c4 0%,#5a76a6 50%,#49689d 50%,#4c6b9f 100%);
+    background: -ms-linear-gradient(#8fa4c4 0%,#5a76a6 50%,#49689d 50%,#4c6b9f 100%);
+    background: -o-linear-gradient(#8fa4c4 0%,#5a76a6 50%,#49689d 50%,#4c6b9f 100%);
+}
+.ios .dwwb {
+    color: #fff;
+    border: 0;
+    background: #3f4e68;
+    background: -webkit-gradient(linear,left bottom,left top,color-stop(0, #3f4e68),color-stop(0.5, #75859f),color-stop(0.5, #808ea6),color-stop(1, #c7d1e2));
+    background: -moz-linear-gradient(#c7d1e2 0%,#808ea6 50%,#75859f 50%,#3f4e68 100%);
+    background: -ms-linear-gradient(#c7d1e2 0%,#808ea6 50%,#75859f 50%,#3f4e68 100%);
+    background: -o-linear-gradient(#c7d1e2 0%,#808ea6 50%,#75859f 50%,#3f4e68 100%);
+}
+.ios .dwwl .dwb-a {
+    background: #252c36;
+    background: -webkit-gradient(linear,left bottom,left top,color-stop(0, #252c36),color-stop(0.5, #171e28),color-stop(0.5, #272e38),color-stop(1, #6b6e75));
+    background: -moz-linear-gradient(#6b6e75 0%,#272e38 50%,#171e28 50%,#252c36 100%);
+    background: -ms-linear-gradient(#6b6e75 0%,#272e38 50%,#171e28 50%,#252c36 100%);
+    background: -o-linear-gradient(#6b6e75 0%,#272e38 50%,#171e28 50%,#252c36 100%);
+}
+.ios .dwb-s {
+    width: auto;
+    float: right;
+    text-align: right;
+}
+.ios .dwb-t {
+  font-size: 16px;
+  font-weight: bold;
+  text-shadow: 0 -1px #000;
+}
+.ios .dwb-c {
+    width: auto;
+    float: left;
+    text-align: left;
+}

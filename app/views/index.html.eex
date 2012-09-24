@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>ルノアール検索</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <link href="/public/images/apple-touch-icon.png" rel="apple-touch-icon" type="image/png" />
+    <link href="/public/stylesheets/jquery.mobile-1.1.1.css" media="all" rel="stylesheet" type="text/css" />
+    <link href="/public/stylesheets/mobiscroll.core-2.0.3.css" media="all" rel="stylesheet" type="text/css" />
+    <link href="/public/stylesheets/mobiscroll.ios-2.0.2.css" media="all" rel="stylesheet" type="text/css" />
+    <link href="/public/stylesheets/shops.css" media="all" rel="stylesheet" type="text/css" />
+    <script src="/public/javascripts/jquery.js" type="text/javascript"></script>
+    <script src="/public/javascripts/jquery_ujs.js" type="text/javascript"></script>
+    <script src="/public/javascripts/jqm_setup.js" type="text/javascript"></script>
+    <script src="/public/javascripts/jquery.mobile-1.1.1.js" type="text/javascript"></script>
+    <script src="/public/javascripts/mobiscroll.core-2.0.3.js" type="text/javascript"></script>
+    <script src="/public/javascripts/mobiscroll.datetime-2.0.3.js" type="text/javascript"></script>
+    <script src="/public/javascripts/mobiscroll.ios-2.0.2.js" type="text/javascript"></script>
+    <script src="/public/javascripts/shops.js" type="text/javascript"></script>
+  </head>
+  <body>
+    <div data-role="page">
+      <div data-position="fixed" data-role="header">
+        <h1>ルノアール検索</h1>
+      </div>
+      <div data-role="content" id="index-contents">
+        <form accept-charset="UTF-8" action="/search" method="post"><div style="margin:0;padding:0;display:inline">
+          <div style="margin-bottom:10px">
+            <div style="margin-bottom:-4px">
+              <label for="scroller" style="display:inline-block;margin-top:0.5em">時刻</label>
+              <a href="http://localhost:3000/#" class="ui-btn-right" data-inline="true" data-mini="true" data-role="button" data-shadow="false" id="now-time" style="float:right;color:#555">現在時刻</a>
+              <div style="clear:both;"></div>
+            </div>
+            <input id="scroller" name="scroller" style="margin-top:.3em" type="button" value="2012/09/24 00:05">
+          </div>
+          <input id="real_value" name="real_value" type="hidden" value="2012/09/24 00:05">
+          <div style="margin-bottom:14px;">
+            <div>
+              <label for="location" style="display:inline-block;margin-top:0.5em">場所</label>
+              <a href="http://localhost:3000/#" class="ui-btn-right" data-inline="true" data-mini="true" data-role="button" data-shadow="false" id="now-loc" style="float:right;color:#555">現在地</a>
+            </div>
+            <input id="location-field" name="location" placeholder="未入力で現在地から検索" type="text" value="">
+          </div>
+          <input id="lat" name="lat" type="hidden" value="">
+          <input id="lng" name="lng" type="hidden" value="">
+          <div class="custom-collapse-wrap" data-role="fieldcontain" style="margin-bottom:20px">
+            <fieldset data-role="controlgroup">
+              <div data-role="collapsible" id="options-collapse">
+                <legend>オプション</legend>
+                <input name="options[yahoobb]" type="hidden" value="0"><input id="cb-a" name="options[yahoobb]" type="checkbox" value="1">
+                <label for="cb-a">BBモバイルポイント</label>
+                <input name="options[ld_wireless]" type="hidden" value="0"><input id="cb-b" name="options[ld_wireless]" type="checkbox" value="1">
+                <label for="cb-b">livedoor mobile</label>
+                <input name="options[rakutenedy]" type="hidden" value="0"><input id="cb-c" name="options[rakutenedy]" type="checkbox" value="1">
+                <label for="cb-c">Edy</label>
+                <input name="options[copy]" type="hidden" value="0"><input id="cb-d" name="options[copy]" type="checkbox" value="1">
+                <label for="cb-d">コピー機</label>
+                <input name="options[myspace]" type="hidden" value="0"><input id="cb-e" name="options[myspace]" type="checkbox" value="1">
+                <label for="cb-e">マイスペース/ビジネススペース</label>
+              </div>
+            </fieldset>
+          </div>
+          <input id="submit" name="commit" style="margin: 3em 0" type="submit" value="検索">
+        </form>
+      </div>
+      <div data-position="fixed" data-role="footer">
+        <h4>© 2012 mururu</h4>
+      </div>
+      <script>
+        //<![CDATA[
+        $(function(){
+          $("#real_value").scroller({
+            preset: 'datetime',
+            showOnFocus: false,
+            theme: 'ios',
+            setText: '完了',
+            cancelText: '戻る',
+            dateFormat: 'yy/mm/dd',
+            dateOrder: 'mdd',
+            timeFormat: 'H:ii',
+            timeWheels: 'Hii',
+            monthText: '月',
+            dayText: '日',
+            hourText: '時',
+            minuteText: '分'
+          });
+
+          $('#scroller').click(function() {
+            $('#real_value').scroller('show');
+            return false;
+          });
+        });
+
+        $(function(){
+          $('#now-time').click(function(e) {
+            e.preventDefault();
+            var now = new Date();
+            var year = now.getFullYear();
+            var month = ("0" + (now.getMonth()+1)).slice(-2);
+            var date = ("0" + now.getDate()).slice(-2);
+            var hour = "" + now.getHours();
+            var min = ("0" + now.getMinutes()).slice(-2)
+            var text = year + '/' + month  + '/' + date + ' ' + hour + ':' + min;
+            $($('.ui-btn-text')[1]).text(text);
+            $('#real_value').val(text);
+            $('#scroller').val(text);
+          });
+
+          $("#now-loc").click(function(e) {
+            e.preventDefault();
+            $('#location-field').val('');
+          });
+        });
+
+        $(function(){
+          $("#options-collapse").bind('collapse', function(){
+            $("#options-collapse input[type='checkbox']").attr("checked", false).checkboxradio("refresh"); 
+          });
+        });
+
+        $(function(){
+          $("#submit").click(function(e) {
+            if($('#location-field').val()=='') {
+              e.preventDefault();
+              if(navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(
+                function(position) {
+                  $('#lat').val(position.coords.latitude);
+                  $('#lng').val(position.coords.longitude);
+                  $("form").submit();
+                },
+                function(e) {
+                  $("form").submit();
+                }
+                );
+              }
+            }
+          });
+        });
+        //]]>
+      </script>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ルノアール検索</title>
+    <meta content='width=device-width, initial-scale=1' name='viewport'>
+    <link href="/assets/apple-touch-icon.png" rel="apple-touch-icon" type="image/png" />
+    <link href="/public/images/apple-touch-icon.png" rel="apple-touch-icon" type="image/png" />
+    <link href="/public/stylesheets/jquery.mobile-1.1.1.css" media="all" rel="stylesheet" type="text/css" />
+    <link href="/public/stylesheets/mobiscroll.core-2.0.3.css" media="all" rel="stylesheet" type="text/css" />
+    <link href="/public/stylesheets/mobiscroll.ios-2.0.2.css" media="all" rel="stylesheet" type="text/css" />
+    <link href="/public/stylesheets/shops.css" media="all" rel="stylesheet" type="text/css" />
+    <script src="/public/javascripts/jquery.js" type="text/javascript"></script>
+    <script src="/public/javascripts/jquery_ujs.js" type="text/javascript"></script>
+    <script src="/public/javascripts/jqm_setup.js" type="text/javascript"></script>
+    <script src="/public/javascripts/jquery.mobile-1.1.1.js" type="text/javascript"></script>
+    <script src="/public/javascripts/mobiscroll.core-2.0.3.js" type="text/javascript"></script>
+    <script src="/public/javascripts/mobiscroll.datetime-2.0.3.js" type="text/javascript"></script>
+    <script src="/public/javascripts/mobiscroll.ios-2.0.2.js" type="text/javascript"></script>
+    <script src="/public/javascripts/shops.js" type="text/javascript"></script>
+  </head>
+  <body>
+    <div data-role='page'>
+      <div data-position='fixed' data-role='header'>
+        <a href="/" data-direction="reverse" data-rel="back" id="customBack">戻る</a>
+        <h1><%= assigns[:shop].name %></h1>
+      </div>
+      <div data-role='content' id='shop-contents'>
+        <div id='shop-name'>
+          <strong><%= Shop.type_name(assigns[:shop]) %></strong>
+          <h2><%= assigns[:shop].name %></h2>
+        </div>
+        <div id='hours'>
+          <h3>営業時間</h3>
+          <%= Enum.map Shop.sorted_hours(assigns[:shop]), fn({day,hour}) -> %>
+            <%= if hour do %>
+              <%= Shop.day_statement(day,hour) %>
+              <br>
+            <% end %>
+          <% end %>
+        </div>
+        <div id='smoking'>
+          <h3>喫煙席</h3>
+          <p><%= assigns[:shop].smoking_num %>席</p>
+        </div>
+        <div id='smoking'>
+          <h3>禁煙席</h3>
+          <p><%= assigns[:shop].non_smoking_num %>席</p>
+        </div>
+        <div id='address'>
+          <h3>住所</h3>
+          <p><%= assigns[:shop].address %> (<a href="http://maps.google.com/maps?q=<%= Shop.address_without_building assigns[:shop] %>">地図で開く</a>)</p>
+        </div>
+        <div id='phone'>
+          <h3>電話番号</h3>
+          <p><%= assigns[:shop].phone %></p>
+        </div>
+        <div id='options'>
+          <h3>施設情報</h3>
+          <ul style='margin-top:4px;padding-left:24px'>
+            <%= Enum.map assigns[:shop].options, fn(option) -> %>
+              <%= if Shop.valid_option?(option) do %>
+                <li style='height:24px;line-height:20px'>
+                  <%= Shop.option_name(option) %>
+                </li>
+              <% end %>
+            <% end %>
+          </ul>
+        </div>
+      </div>
+      <div data-position='fixed' data-role='footer'>
+        <h4>&copy; 2012 mururu</h4>
+      </div>
+    </div>
+  </body>
+</html>

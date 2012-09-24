@@ -1,0 +1,43 @@
+/* line 5, ../../app/assets/stylesheets/shops.css.scss.erb */
+a {
+  -webkit-touch-callout: none;
+}
+
+/* line 10, ../../app/assets/stylesheets/shops.css.scss.erb */
+#index-contents .custom-collapse-wrap {
+  padding: 0;
+  border-bottom: none;
+}
+/* line 16, ../../app/assets/stylesheets/shops.css.scss.erb */
+#index-contents .custom-collapse-wrap .ui-collapsible-heading .ui-collapsible-heading-toggle {
+  background-image: none;
+  background: none;
+  border: none;
+}
+/* line 22, ../../app/assets/stylesheets/shops.css.scss.erb */
+#index-contents .custom-collapse-wrap .ui-collapsible-heading .ui-collapsible-heading-toggle .ui-btn-inner {
+  font-size: 16px;
+  line-height: 1.4;
+  display: inline-block;
+  font-weight: normal;
+  margin: 0 0 .3em;
+  padding: 0 30px 0 10px;
+}
+/* line 31, ../../app/assets/stylesheets/shops.css.scss.erb */
+#index-contents .custom-collapse-wrap .ui-collapsible-heading .ui-collapsible-heading-toggle .ui-btn-inner .ui-icon {
+  left: 94px;
+}
+
+/* line 42, ../../app/assets/stylesheets/shops.css.scss.erb */
+#shop-contents h3 {
+  margin-bottom: 0;
+}
+/* line 46, ../../app/assets/stylesheets/shops.css.scss.erb */
+#shop-contents p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+/* line 52, ../../app/assets/stylesheets/shops.css.scss.erb */
+#shop-contents #shop-name h2 {
+  margin-top: 0px;
+}

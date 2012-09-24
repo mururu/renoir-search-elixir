@@ -1,8 +1,8 @@
-defmodule RenooirSearchElixir.Mixfile do
+defmodule RenoirSearchElixir.Mixfile do
   use Mix.Project
 
   def project do
-    [ app: :renooir_search_elixir,
+    [ app: :renoir_search_elixir,
       version: "0.0.1",
       prepare_task: "dynamo.app",
       compilers: [:elixir, :dynamo, :app],
@@ -16,6 +16,9 @@ defmodule RenooirSearchElixir.Mixfile do
 
   defp deps do
     [ { :cowboy, "0.6.1", github: "josevalim/cowboy" },
-      { :dynamo, "0.1.0.dev", github: "josevalim/dynamo" } ]
+      { :dynamo, "0.1.0.dev", github: "josevalim/dynamo" },
+      { :httpotion, "0.1.0", github: "myfreeweb/httpotion" },
+      { :jsx, "1.3.3", github: "talentdeficit/jsx"},
+      { :holidayjp, "0.0.1", github: "mururu/holidayjp"}]
   end
 end
