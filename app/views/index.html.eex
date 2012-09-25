@@ -3,6 +3,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>ルノアール検索</title>
+    <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <link href="/public/images/apple-touch-icon.png" rel="apple-touch-icon" type="image/png" />
     <link href="/public/stylesheets/jquery.mobile-1.1.1.css" media="all" rel="stylesheet" type="text/css" />
