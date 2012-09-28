@@ -823,7 +823,7 @@ a.ui-link-inherit {
 .ui-icon-searchfield:after {
 	background: 						#666 /*{global-icon-color}*/;
 	background: 						rgba(0,0,0,.4) /*{global-icon-disc}*/;
-	background-image: url(/public/images/icons-18-white.png) /*{global-icon-set}*/;
+	background-image: url(/static/images/icons-18-white.png) /*{global-icon-set}*/;
 	background-repeat: no-repeat;
 	-moz-border-radius: 				9px;
 	-webkit-border-radius: 				9px;
@@ -834,7 +834,7 @@ a.ui-link-inherit {
 .ui-icon-alt {
 	background: 						#fff;
 	background: 						rgba(255,255,255,.3);
-	background-image: url(/public/images/icons-18-black.png);
+	background-image: url(/static/images/icons-18-black.png);
 	background-repeat: no-repeat;
 }
 /* HD/"retina" sprite
@@ -855,7 +855,7 @@ a.ui-link-inherit {
 		background-size: 776px 18px;
 	}
 	.ui-icon-alt {
-		background-image: url(/public/images/icons-36-black.png);
+		background-image: url(/static/images/icons-36-black.png);
 	}
 }
 /* plus minus */
@@ -945,7 +945,7 @@ a.ui-link-inherit {
 }
 /* loading icon */
 .ui-icon-loading {
-	background: url(/public/images/ajax-loader.gif);
+	background: url(/static/images/ajax-loader.gif);
 	background-size: 46px 46px;
 }
 /* Button corner classes

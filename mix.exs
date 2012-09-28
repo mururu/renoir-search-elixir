@@ -15,8 +15,9 @@ defmodule RenoirSearchElixir.Mixfile do
   end
 
   defp deps do
-    [ { :cowboy, "0.6.1", github: "josevalim/cowboy" },
-      { :dynamo, "0.1.0.dev", github: "josevalim/dynamo" },
+    [ { :ranch, %r(.*), github: "extend/ranch" },
+      { :cowboy, %r(.*), github: "extend/cowboy" },
+      { :dynamo, "0.1.0.dev", github: "mururu/dynamo", branch: "static_heroku" },
       { :httpotion, "0.1.0", github: "myfreeweb/httpotion" },
       { :jsx, "1.3.3", github: "talentdeficit/jsx"},
       { :holidayjp, "0.0.1", github: "mururu/holidayjp"}]

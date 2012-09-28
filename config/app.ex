@@ -9,7 +9,7 @@ defmodule RenooirSearchElixir do
     otp_app: :renooir_search_elixir,
     # The route from where public assets are served
     # You can turn off static assets by setting it to false
-    public_route: "/public"
+    static_route: "/static"
 
   initializer :start_otp_app do
     :application.start config[:dynamo][:otp_app]
